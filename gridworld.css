@@ -34,6 +34,9 @@ h2 {
 svg#gridworld {
     padding-right: 2em;
     font-size: 2.4em;
+    overflow: visible;
+    width: auto;
+
 }
 
 svg#keys {
