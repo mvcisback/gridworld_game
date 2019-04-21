@@ -91,7 +91,7 @@ function redraw(){
     state.bx = 0;
     state.by = 0;
     step_counter.textContent = time;
-    step_counter.setAttribute("value", 100 - time);
+    step_counter.setAttribute("value", 20 - time);
 }
 
 
