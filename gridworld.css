@@ -1,0 +1,47 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#game-container {
+    display: flex;
+    align-items: flex-start;
+    border: black solid 3px;
+    padding: 1em;
+    justify-content: space-around;
+}
+
+#side-bar div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: black solid 2px;
+    margin: 0.2em;
+    padding: 0.2em;
+    max-width: 20em;
+}
+
+#side-bar div p {
+    padding-left: 1em;
+}
+
+h2 {
+    font-size: 1em;
+    margin: 0.2em;
+}
+
+svg#gridworld {
+    padding-right: 2em;
+}
+
+svg#keys {
+    height: 3em;
+    width: 6em;
+}
+
+figure {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
