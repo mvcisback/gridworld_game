@@ -1,6 +1,6 @@
-const x0 = 20;
-const y0 = 20;
-const dx = 38;
+const x0 = 21;
+const y0 = 21;
+const dx = 38.5;
 const xmax = 20;
 const actions = new Set([
     'ArrowRight',
@@ -26,8 +26,8 @@ var agent;
 var gridworld_s = new Snap('#gridworld');
 Snap.load('imgs/gridworld.svg', function (response) {
     gridworld_s.append(response);
-    agent = gridworld_s.circle(x0, x0, "0.3cm");
-    agent.attr({class: "agent"});
+    agent = Snap('#agent1');
+    redraw();
 });
 var keys_s = new Snap('#keys');
 Snap.load('imgs/Qwerty.svg', function (response) {

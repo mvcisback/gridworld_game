@@ -33,6 +33,7 @@ h2 {
 
 svg#gridworld {
     padding-right: 2em;
+    font-size: 2.4em;
 }
 
 svg#keys {
@@ -44,4 +45,12 @@ figure {
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+
+.agent {
+    fill: black;
+    stroke-width: 2;
+    stroke: grey;
+    animation: blinker 4s linear infinite;
+    animation: move 5s ease infinite;
 }
