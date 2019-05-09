@@ -23,12 +23,6 @@ var state = {
 
 var agent;
 var gridworld_s = new Snap('#gridworld');
-Snap.load('imgs/gridworld.svg', function (response) {
-    gridworld_s.append(response);
-    agent = Snap('#agent1');
-    redraw();
-});
-
 
 function move(keyName){
     if (!actions.has(keyName)) {

@@ -103,3 +103,8 @@ figcaption {
 #ready-button {
     margin: 0.4em;
 }
+
+#experiment-over {
+    justify-content: center;
+    min-height: 30em;
+}

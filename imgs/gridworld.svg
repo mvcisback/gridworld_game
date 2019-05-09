@@ -23,14 +23,14 @@
     </style>
   </defs>
   <rect class="background" height="100%" width="100%" x="0" y="0"/>
-  <rect class="recharge" height="0.9em" width="0.9em" x="0.1em" y="0.1em"/>
+  <rect class="normal" height="0.9em" width="0.9em" x="0.1em" y="0.1em"/>
   <rect class="normal" height="0.9em" width="0.9em" x="0.1em" y="1.1em"/>
   <rect class="lava" height="0.9em" width="0.9em" x="0.1em" y="2.1em"/>
   <rect class="lava" height="0.9em" width="0.9em" x="0.1em" y="3.1em"/>
   <rect class="normal" height="0.9em" width="0.9em" x="0.1em" y="4.1em"/>
   <rect class="normal" height="0.9em" width="0.9em" x="0.1em" y="5.1em"/>
   <rect class="lava" height="0.9em" width="0.9em" x="0.1em" y="6.1em"/>
-  <rect class="recharge" height="0.9em" width="0.9em" x="0.1em" y="7.1em"/>
+  <rect class="normal" height="0.9em" width="0.9em" x="0.1em" y="7.1em"/>
   <rect class="normal" height="0.9em" width="0.9em" x="1.1em" y="0.1em"/>
   <rect class="normal" height="0.9em" width="0.9em" x="1.1em" y="1.1em"/>
   <rect class="lava" height="0.9em" width="0.9em" x="1.1em" y="2.1em"/>
