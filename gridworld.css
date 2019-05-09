@@ -1,3 +1,7 @@
+@import url(https://unpkg.com/nes.css/css/nes-core.min.css);
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
+/*@import url(https://unpkg.com/purecss@1.0.0/build/pure-min.css);*/
+
 body {
     display: flex;
     flex-direction: column;
@@ -7,32 +11,31 @@ body {
 #game-container {
     display: flex;
     align-items: flex-start;
-    border: black solid 3px;
+    justify-content: space-evenly;
     padding: 1em;
-    justify-content: space-around;
+    min-width: 60%;
 }
 
 #side-bar div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: black solid 2px;
     margin: 0.2em;
     padding: 0.2em;
-    max-width: 20em;
+    max-width: 30em;
 }
 
 #side-bar div p {
-    padding-left: 1em;
+    margin-top: 0;
+    text-align: center;
 }
 
 h2 {
     font-size: 1em;
-    margin: 0.2em;
+    margin-top: 0.2em;
 }
 
 svg#gridworld {
-    padding-right: 2em;
     font-size: 2.4em;
     overflow: visible;
     width: auto;
@@ -56,4 +59,47 @@ figure {
     stroke: grey;
     animation: blinker 4s linear infinite;
     animation: move 5s ease infinite;
+}
+
+#training button {
+    width: 80%;
+    margin: 0.4em;
+}
+
+#main-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#game-container progress {
+    margin: 1em;
+    height: 2em;
+    width: 80%;
+}
+
+#side-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    height: 100%;
+}
+
+figcaption {
+    text-align: center;
+}
+
+#battery h2 {
+    padding-top: 1em;
+    margin: 0;
+}
+
+#battery progress {
+    margin: 0;
+    width: 100%;
+}
+
+#ready-button {
+    margin: 0.4em;
 }

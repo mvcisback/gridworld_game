@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Gridworld Game</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="gridworld.css"/>
+        <link rel="stylesheet" href="chardin.js/chardinjs.css">
+
+    </head>
+    <body>
+        <h1>Learning Phase</h1>
+        <div id="game-container">
+            <section id="side-bar">
+                <div class="nes-container">
+                    <h2 class="title">Objective:</h2>
+                    <p>Learn the task from the teacher.</p>
+                </div>
+                <div class="nes-container">
+                    <h2>How to learn:</h2>
+                    <p>Ask for passing or failing examples.</p>
+                </div>
+                <div class="nes-container" id="training">
+                    <h2 class="title">Request an example:</h2>
+                    <button class="nes-btn is-success" name="posDemo" type="button">Passing Example</button>
+                    <button class="nes-btn is-error" name="negDemo" type="button">Failing Example</button>
+                    <p>Remaining Queries: 100</p>
+                </div>
+                <div class="nes-container">
+                    <h2>Are you ready to be tested?</h2>
+                    <button id="ready-button" class="nes-btn is-disabled" name="ready" type="button">Yes!</button>
+                </div>
+            </section>
+            <div class="nes-container"  id="main-col" data-intro="TODO." data-position="bottom">
+                <svg height="8.05em" width="8.05em" id="gridworld"></svg>
+                <div id="battery">
+                    <h2 class="title">Battery Level:</h2>
+                    <progress class="nes-progress is-primary" id="step-count" max="20" value="20"></progress>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"></script>
+        <script src="chardin.js/chardinjs.min.js"></script>
+        <script src="gridworld.js"></script>
+        <script src="tutorial.js"></script>
+    </body>
+</html>

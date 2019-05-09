@@ -12,7 +12,7 @@
                .normal {fill: white; }
                rect {
                    stroke: black;
-                   stroke-width: 1;
+                   stroke-width: 3;
                }
                .agent {
                    fill: black;

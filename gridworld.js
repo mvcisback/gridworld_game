@@ -29,10 +29,6 @@ Snap.load('imgs/gridworld.svg', function (response) {
     agent = Snap('#agent1');
     redraw();
 });
-var keys_s = new Snap('#keys');
-Snap.load('imgs/Qwerty.svg', function (response) {
-    keys_s.append(response);
-});
 
 
 function move(keyName){
@@ -93,10 +89,3 @@ function redraw(){
     step_counter.textContent = time;
     step_counter.setAttribute("value", 20 - time);
 }
-
-
-document.addEventListener('keydown', (event) => {
-    const keyName = event.key;
-    move(keyName);
-    redraw();
-}, false);
