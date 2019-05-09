@@ -21,13 +21,16 @@
                 </div>
                 <div class="nes-container" id="training">
                     <h2 class="title">Request an example:</h2>
-                    <button class="nes-btn is-success" name="posDemo" type="button">Passing Example</button>
-                    <button class="nes-btn is-error" name="negDemo" type="button">Failing Example</button>
+                    <button id="posDemo" class="nes-btn is-success" 
+                            name="posDemo" type="button">Passing Example</button>
+                    <button id="negDemo" class="nes-btn is-error" 
+                            name="negDemo" type="button">Failing Example</button>
                     <p>Remaining Queries: 100</p>
                 </div>
                 <div class="nes-container">
                     <h2>Are you ready to be tested?</h2>
-                    <button id="ready-button" class="nes-btn is-disabled" name="ready" type="button">Yes!</button>
+                    <button id="ready-button" class="nes-btn is-disabled"
+                            name="ready" type="button">Yes!</button>
                 </div>
             </section>
             <div class="nes-container"  id="main-col" data-intro="TODO." data-position="bottom">
@@ -41,6 +44,7 @@
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/async/2.6.2/async.min.js"></script>
         <script src="chardin.js/chardinjs.min.js"></script>
         <script src="gridworld.js"></script>
         <script src="tutorial.js"></script>

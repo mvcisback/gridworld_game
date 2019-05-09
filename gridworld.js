@@ -12,13 +12,14 @@ const actions = new Set([
 const step_counter = document.getElementById('step-count');
 
 
-var time = 0;
+
 
 var state = {
     x: 0,
     y: 0,
     bx: 0,
     by: 0,
+    time: 0,
 };
 
 
@@ -35,7 +36,7 @@ function move(keyName){
     if (!actions.has(keyName)) {
         return;
     }
-    time += 1;
+    state.time += 1;
 
     switch (keyName) {
     case 'ArrowRight':
@@ -86,6 +87,6 @@ function redraw(){
     );
     state.bx = 0;
     state.by = 0;
-    step_counter.textContent = time;
-    step_counter.setAttribute("value", 20 - time);
+    step_counter.textContent = state.time;
+    step_counter.setAttribute("value", 20 - state.time);
 }
