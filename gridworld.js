@@ -12,8 +12,6 @@ const actions = new Set([
 const step_counter = document.getElementById('step-count');
 
 
-
-
 var state = {
     x: 0,
     y: 0,

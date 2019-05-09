@@ -25,7 +25,7 @@
                             name="posDemo" type="button">Passing Example</button>
                     <button id="negDemo" class="nes-btn is-error" 
                             name="negDemo" type="button">Failing Example</button>
-                    <p>Remaining Queries: 100</p>
+                    <p>Remaining Queries: <span id="remaining-queries">10</span></p>
                 </div>
                 <div class="nes-container">
                     <h2>Are you ready to be tested?</h2>
@@ -37,7 +37,8 @@
                 <svg height="8.05em" width="8.05em" id="gridworld"></svg>
                 <div id="battery">
                     <h2 class="title">Battery Level:</h2>
-                    <progress class="nes-progress is-primary" id="step-count" max="20" value="20"></progress>
+                    <progress class="nes-progress is-primary" id="step-count" max="20" value="20">
+                    </progress>
                 </div>
             </div>
         </div>

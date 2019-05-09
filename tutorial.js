@@ -4,8 +4,9 @@ const BUTTONS = {
     negDemo: document.getElementById("negDemo"),
     ready: document.getElementById("ready-button"),
 };
+const REMAINING_QUERIES_FIELD = document.getElementById('remaining-queries');
 
-var REMAINING_QUERIES = 100;
+var REMAINING_QUERIES = 10;
 var UI_DISABLED = false;
 
 function mover(pos, i){
@@ -18,13 +19,18 @@ function mover(pos, i){
 }
 
 
+function dec_query_count(){
+    REMAINING_QUERIES = Math.max(0, REMAINING_QUERIES - 1);
+    REMAINING_QUERIES_FIELD.textContent = REMAINING_QUERIES;
+}
+
+
 function enable_ui(){
-    //UI_DISABLED = false;
+    UI_DISABLED = false;
     for (var p in BUTTONS){
         BUTTONS[p].classList.remove('is-disabled');
         BUTTONS[p].disabled = false;
     }
-    console.log('ui enabled');
 }
 
 
@@ -34,7 +40,6 @@ function disable_ui(){
         BUTTONS[p].classList.add('is-disabled');
         BUTTONS[p].disabled = true;
     }
-    console.log('ui disabled');
 }
 
 
@@ -45,11 +50,13 @@ function replay(positions){
     disable_ui()
     state.time = -1;
     for (var i = 0; i < 8; i++) { mover(positions[i], i); }
-    window.setTimeout(enable_ui, (positions.length + 1)*MOVE_TIME);
+    window.setTimeout(enable_ui, (positions.length + 0.1)*MOVE_TIME);
 }
 
 
 BUTTONS.posDemo.onclick = function positive_demo(){
+    if (REMAINING_QUERIES <= 0){ return; }
+    dec_query_count();
     replay([
         {x: 0, y: 0},
         {x: 1, y: 0},
@@ -63,6 +70,8 @@ BUTTONS.posDemo.onclick = function positive_demo(){
 }
 
 BUTTONS.negDemo.onclick = function negative_demo(){
+    if (REMAINING_QUERIES <= 0){ return; }
+    dec_query_count();
     replay([
         {x: 0, y: 0},
         {x: 0, y: 1},
