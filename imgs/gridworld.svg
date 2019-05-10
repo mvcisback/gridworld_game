@@ -6,7 +6,7 @@
                .background { fill: white; }
                .line { stroke: firebrick; stroke-width: .1mm; }
                .lava { fill: #ff8b8b; }
-               .dry { fill: #f4a460; }
+               .dry { fill: #92cc41; }
                .water { fill: #afafff; }
                .recharge {fill: #ffff00; }
                .normal {fill: white; }
