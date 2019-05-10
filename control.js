@@ -21,18 +21,21 @@ document.addEventListener('keydown', (event) => {
     const keyName = event.key;
     move(keyName);
     redraw();
-    if (is_recharge(state)){
-        if (TRIAL_NUM == MAX_TRIALS){
-            location.href = "./done.html";
-        }
-        TRIAL_NUM = Math.min(MAX_TRIALS, TRIAL_NUM + 1);
+    if (is_recharge(state) || state.time > 20){
+        if (state.testing){
+            if (TRIAL_NUM == MAX_TRIALS){
+                location.href = "./done.html";
+            }
+            TRIAL_NUM = Math.min(MAX_TRIALS, TRIAL_NUM + 1);
 
-        document.getElementById("trial-num").textContent = TRIAL_NUM;
+            document.getElementById("trial-num").textContent = TRIAL_NUM;
+        }
         state.time = 0;
         state.x = 0;
         state.y = 5;
         redraw();
     }
+
 }, false);
 
 

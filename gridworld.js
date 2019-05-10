@@ -18,6 +18,7 @@ var state = {
     bx: 0,
     by: 0,
     time: 0,
+    testing: false,
 };
 
 

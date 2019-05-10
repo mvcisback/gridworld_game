@@ -4,12 +4,49 @@
         <title>Experiment Start</title>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="gridworld.css"/>
-        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     </head>
     <body id="experiment-over">
         <h1>Introduction</h1>
-        <button class="nes-btn is-primary" onclick="location.href='./intro2.html'">Click to Continue</button>
 
+        <div id="game-container">
+            <section id="side-bar">
+                <div id="instructions" class="nes-container">
+                    <h2>Instructions</h2>
+                                        
+                    <p class="nes-container">In the following experiment, you will be asked
+                       to control a robot moving in the 2d gridworld
+                       on the right.
+                    </p>
+                    <p class="nes-container">Please take a moment to test moving the robot.</p>
+                    <p class="nes-container"><strong>Note:</strong> Running out of battery
+                        or touching a yellow recharge tile 
+                        will reset the world.
+                    </p>
+                </div>
+                <div class="nes-container">
+                    <h2>Controls</h2>
+                    <figure>
+                        <svg id="keys"></svg>
+                        <figcaption>Use arrow keys to move the agent.</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <div class="nes-container"  id="main-col" data-intro="TODO." data-position="bottom">
+                <svg height="8.05em" width="8.05em" id="gridworld"></svg>
+                <div id="battery">
+                    <h2 class="title">Battery Level:</h2>
+                    <progress class="nes-progress is-primary"
+                              id="step-count" max="20" value="20">
+                    </progress>
+                </div>
+            </div>
+        </div>
+
+
+        <button class="nes-btn is-primary" onclick="location.href='./intro2.html'">Click to Continue</button>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"></script>
+        <script src="gridworld.js"></script>
+        <script src="control.js"></script>
     </body>
 </html>
