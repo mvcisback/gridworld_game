@@ -108,3 +108,13 @@ figcaption {
     justify-content: center;
     min-height: 30em;
 }
+
+
+figure#robot2human {
+    height: 10em;
+    align-items: center;
+}
+
+#robot2human tspan {
+    font-family: "Press Start 2P";
+}
