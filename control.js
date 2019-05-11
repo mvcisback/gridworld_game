@@ -1,39 +1,26 @@
-const MAX_TRIALS = 3;
-var TRIAL_NUM = 1;
-
-
 function is_recharge(state){
     return (state.x == 7 && state.y == 0) 
         || (state.x == 7 && state.y == 7);
 }
 
 
-Snap.load('imgs/gridworld.svg', function (response) {
-    gridworld_s.append(response);
-    agent = Snap('#agent1');
-    state.y = 5;
-    state.x = 0;
-    redraw();
-});
-
+state.world = "gridworld";
 
 document.addEventListener('keydown', (event) => {
     const keyName = event.key;
     move(keyName);
     redraw();
-    if (is_recharge(state) || state.time > 20){
+    if (is_recharge(state) || state.battery < 0){
         if (state.testing){
-            if (TRIAL_NUM == MAX_TRIALS){
+            if (state.trial_num == state.max_trials){
                 location.href = "./done.html";
             }
-            TRIAL_NUM = Math.min(MAX_TRIALS, TRIAL_NUM + 1);
-
-            document.getElementById("trial-num").textContent = TRIAL_NUM;
+            state.trial_num = Math.min(state.max_trials, state.trial_num + 1);
         }
-        state.time = 0;
+        state.battery = state.max_battery;
         state.x = 0;
         state.y = 5;
-        redraw();
+        window.setTimeout(redraw, 800);
     }
 
 }, false);
