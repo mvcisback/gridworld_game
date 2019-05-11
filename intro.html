@@ -13,37 +13,25 @@
                 <div id="instructions" class="nes-container">
                     <h2>Instructions</h2>
                                         
-                    <p class="nes-container">In the following experiment, you will be asked
-                       to control a robot moving in the 2d gridworld
-                       on the right.
+                    <p class="nes-container">
+                        In the following experiment, you will be asked
+                        to control a robot moving in the 2d gridworld
+                        on the right.
                     </p>
-                    <p class="nes-container">Please take a moment to test moving the robot.</p>
-                    <p class="nes-container"><strong>Note:</strong> Running out of battery
-                        or touching a yellow recharge tile 
-                        will reset the world.
+                    <p class="nes-container">
+                        Please take a moment to test moving the robot.
+                    </p>
+                    <p class="nes-container">
+                        <strong>Note:</strong> Running out of battery
+                        or touching a yellow recharge tile will reset
+                        the world.
                     </p>
                 </div>
-                <div class="nes-container">
-                    <h2>Controls</h2>
-                    <figure>
-                        <svg id="keys"></svg>
-                        <figcaption>Use arrow keys to move the agent.</figcaption>
-                    </figure>
-                </div>
+                <controls_ui></controls_ui>
             </section>
 
-            <div class="nes-container"  id="main-col" data-intro="TODO." data-position="bottom">
-                <div id="gridworld-container">
-                    <svg height="8.05em" width="8.05em" id="gridworld"></svg>
-                </div>
-
-                <div id="battery">
-                    <h2 class="title">Battery Level:</h2>
-                    <progress class="nes-progress is-primary"
-                              id="battery-bar" :max="max_battery" :value="battery">
-                    </progress>
-                </div>
-            </div>
+            <gridworld :max="max_battery" :value="battery">
+            </gridworld>
         </div>
 
 

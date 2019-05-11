@@ -109,6 +109,39 @@ function get_tested(){
     location.href = "./testing.html";
 }
 
+
+Vue.component('battery', {
+    props: ["max", "value"],
+    template: `
+<div id="battery">
+    <h2 class="title">Battery Level:</h2>
+    <progress class="nes-progress is-primary"
+              :max="max" :value="value"></progress>
+</div>`,
+});
+
+Vue.component('gridworld', {
+    props: ["max", "value"],
+    template: `
+<div class="nes-container">
+  <div id="gridworld-container">
+    <svg height="8.05em" width="8.05em" id="gridworld"></svg>
+  </div>
+  <battery :value="value" :max="max"></battery>
+</div>`
+});
+
+Vue.component('controls_ui', {
+    template: `
+<div class="nes-container">
+  <h2>Controls</h2>
+  <figure>
+    <svg id="keys"></svg>
+    <figcaption>Use arrow keys to move the agent.</figcaption>
+  </figure>
+</div>`
+});
+
 var gridworld_vue = new Vue({
     el: '#game-container',
     data: state,
@@ -119,6 +152,7 @@ var gridworld_vue = new Vue({
         }
     }
 });
+
 
 
 function move(keyName){

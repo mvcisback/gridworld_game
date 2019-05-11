@@ -18,32 +18,19 @@
                 <div class="nes-container">
                     <h2>Trial: <span id="trial-num">{{ trial_num }}</span> / 3</h2>
                 </div>
+                <controls_ui></controls_ui>
 
-                <div class="nes-container">
-                    <h2>Controls</h2>
-                    <figure>
-                        <svg id="keys"></svg>
-                        <figcaption>Use arrow keys to move the agent.</figcaption>
-                    </figure>
-                </div>
                 <div id="recharge-reminder" class="nes-container">
                     <h2>Reminder:</h2>
-                    <p>Remember to end the trail by recharging!
-                       Running out of battery will result in failure!
+                    <p>
+                        Remember to end the trail by recharging!
+                        Running out of battery will result in failure!
                     </p>
                 </div>
 
             </section>
-
-            <div class="nes-container"  id="main-col" data-intro="TODO." data-position="bottom">
-                <svg height="8.05em" width="8.05em" id="gridworld"></svg>
-                <div id="battery">
-                    <h2 class="title">Battery Level:</h2>
-                    <progress class="nes-progress is-primary"
-                              id="battery-bar" :max="max_battery" :value="battery">
-                    </progress>
-                </div>
-            </div>
+            <gridworld :max="max_battery" :value="battery">
+            </gridworld>
         </div>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>

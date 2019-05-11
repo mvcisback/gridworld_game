@@ -50,15 +50,8 @@
                     </button>
                 </div>
             </section>
-            <div class="nes-container"  id="main-col" data-intro="TODO." data-position="bottom">
-                <svg height="8.05em" width="8.05em" id="gridworld"></svg>
-                <div id="battery">
-                    <h2 class="title">Battery Level:</h2>
-                    <progress class="nes-progress is-primary"
-                              id="battery-bar" :max="max_battery" :value="battery">
-                    </progress>
-                </div>
-            </div>
+            <gridworld :max="max_battery" :value="battery">
+            </gridworld>
         </div>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
