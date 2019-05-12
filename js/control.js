@@ -4,8 +4,6 @@ function is_recharge(state){
 }
 
 
-state.world = "gridworld";
-
 document.addEventListener('keydown', (event) => {
     const keyName = event.key;
     move(keyName);

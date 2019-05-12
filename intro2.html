@@ -3,7 +3,7 @@
     <head>
         <title>Experiment Start</title>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="gridworld.css"/>
+        <link rel="stylesheet" href="css/gridworld.css"/>
     </head>
     <body id="experiment-over">
         <h1>Introduction - 2</h1>
@@ -28,6 +28,11 @@
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"></script>
-        <script src="intro.js"></script>
+        <script>
+         var CONTAINER = new Snap('#robot2human');
+         Snap.load('imgs/robot2human.svg', function (response) {
+             CONTAINER.append(response);
+         });
+        </script>
     </body>
 </html>
