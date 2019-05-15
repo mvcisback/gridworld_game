@@ -122,7 +122,7 @@ document.addEventListener('keydown', (event) => {
     if (is_recharge(state) || state.battery < 0){
         if (state.testing){
             if (state.trial_num == state.max_trials){
-                location.href = "./done.html";
+                send("TOGGLE");
             }
             state.trial_num = Math.min(state.max_trials, state.trial_num + 1);
         }
