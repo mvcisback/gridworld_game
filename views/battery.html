@@ -1,0 +1,8 @@
+<div id="battery">
+    <h2 style="text-align: center" class="title">Battery Level:</h2>
+    <progress class="nes-progress is-primary"
+              :max="max_battery" :value="battery"></progress> 
+    {% raw %}
+    <p style="text-align: center"> {{ battery }} / {{ max_battery }}</p> 
+    {% endraw %}
+</div>

@@ -1,4 +1,4 @@
-nunjucks.configure({web: {async: true}});
+nunjucks.configure('views/', {web: {async: true}});
 const { Machine, actions, interpret } = XState;
 const MAX_BATTERY = 20;
 const MOVE_TIME = 500;
