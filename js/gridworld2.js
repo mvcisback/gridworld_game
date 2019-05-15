@@ -78,6 +78,7 @@ function update_page(path, callback){
     };
 };
 
+page.base('/gridworld_game');
 page('/landing', update_page("landing.html", function(){}));
 page('/done', update_page("done.html", function(){}));
 page('/intro', update_page("intro_1.html", gridworld_binder(true)));
