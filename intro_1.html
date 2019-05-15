@@ -1,0 +1,26 @@
+<h1>Introduction</h1>
+<div id="game-container">
+    <section id="side-bar">
+        <div id="instructions" class="nes-container">
+            <h2>Instructions</h2>
+            
+            <p class="nes-container">
+                In the following experiment, you will be asked
+                to control a robot moving in the 2d gridworld
+                on the right.
+            </p>
+            <p class="nes-container">
+                Please take a moment to test moving the robot.
+            </p>
+            <p class="nes-container">
+                <strong>Note:</strong> Running out of battery
+                or touching a yellow recharge tile will reset
+                the world.
+            </p>
+
+        </div>
+        {% include "controls_ui.html" %}
+    </section>
+    {% include "gridworld.html" %}
+</div>
+<button class="nes-btn is-primary" onclick="send('TOGGLE')">Click to Continue</button>

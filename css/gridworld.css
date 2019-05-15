@@ -1,8 +1,7 @@
 @import url(https://unpkg.com/nes.css/css/nes-core.min.css);
 @import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
-/*@import url(https://unpkg.com/purecss@1.0.0/build/pure-min.css);*/
 
-body {
+body, div#app {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -177,4 +176,13 @@ div#intro2-expo :nth-child(7) {
   100% {
       opacity: 1;
   }
+}
+
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 20em;
 }

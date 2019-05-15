@@ -1,0 +1,26 @@
+<h1>Testing Phase</h1>
+<div id="game-container">
+    <section id="side-bar">
+        <div class="nes-container">
+            <h2>Objective:</h2>
+            <p>Perform task and recharge before the battery runs out!</p>
+        </div>
+
+        <div class="nes-container">
+            {% raw %}
+            <h2>Trial: <span id="trial-num">{{ trial_num }}</span> / {{ max_trials }}</h2>
+            {% endraw %}
+        </div>
+        {% include "controls_ui.html" %}
+
+        <div id="recharge-reminder" class="nes-container">
+            <h2>Reminder:</h2>
+            <p>
+                Remember to end the trail by recharging!
+                Running out of battery will result in failure!
+            </p>
+        </div>
+
+    </section>
+    {% include "gridworld.html" %}
+</div>
