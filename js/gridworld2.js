@@ -117,7 +117,9 @@ function is_recharge(state){
 
 
 document.addEventListener('keydown', (event) => {
+    if(state.!controllable){ return; }
     const keyName = event.key;
+
     move(keyName);
     state.controllable = false;
     redraw();
@@ -259,7 +261,7 @@ function redraw(callback){
 
 
 function move(keyName){
-    if (!gridworld_actions.has(keyName) || !state.controllable) {
+    if (!gridworld_actions.has(keyName)) {
         return;
     }
     state.battery -= 1;
