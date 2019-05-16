@@ -117,7 +117,7 @@ function is_recharge(state){
 
 
 document.addEventListener('keydown', (event) => {
-    if(state.!controllable){ return; }
+    if(!state.controllable){ return; }
     const keyName = event.key;
 
     move(keyName);
