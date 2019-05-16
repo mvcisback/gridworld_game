@@ -6,7 +6,7 @@
     .background { fill: white; }
     .line { stroke: firebrick; stroke-width: .1mm; }
     .lava { fill: #ff8b8b; }
-    .dry { fill: #92cc41; }
+    .dry { fill: #f4a460; }
     .water { fill: #afafff; }
     .recharge {fill: #ffff00; }
     .normal {fill: white; }
@@ -16,6 +16,7 @@
     }
 
     .agent {
+      r: 10%;
       fill: black;
       stroke-width: 2;
       stroke: grey;
@@ -30,69 +31,69 @@
 ]]>    </style>
   </defs>
   <rect class="background" height="100%" width="100%" x="0" y="0"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="0.1em" y="0.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="0.1em" y="1.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="0.1em" y="2.1em"/>
-  <rect class="water" height="0.9em" width="0.9em" x="0.1em" y="3.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="0.1em" y="4.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="0.1em" y="5.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="0.1em" y="6.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="0.1em" y="7.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="1.1em" y="0.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="1.1em" y="1.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="1.1em" y="2.1em"/>
-  <rect class="water" height="0.9em" width="0.9em" x="1.1em" y="3.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="1.1em" y="4.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="1.1em" y="5.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="1.1em" y="6.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="1.1em" y="7.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="2.1em" y="0.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="2.1em" y="1.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="2.1em" y="2.1em"/>
-  <rect class="water" height="0.9em" width="0.9em" x="2.1em" y="3.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="2.1em" y="4.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="2.1em" y="5.1em"/>
-  <rect class="lava" height="0.9em" width="0.9em" x="2.1em" y="6.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="2.1em" y="7.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="3.1em" y="0.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="3.1em" y="1.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="3.1em" y="2.1em"/>
-  <rect class="water" height="0.9em" width="0.9em" x="3.1em" y="3.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="3.1em" y="4.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="3.1em" y="5.1em"/>
-  <rect class="dry" height="0.9em" width="0.9em" x="3.1em" y="6.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="3.1em" y="7.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="4.1em" y="0.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="4.1em" y="1.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="4.1em" y="2.1em"/>
-  <rect class="water" height="0.9em" width="0.9em" x="4.1em" y="3.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="4.1em" y="4.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="4.1em" y="5.1em"/>
-  <rect class="lava" height="0.9em" width="0.9em" x="4.1em" y="6.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="4.1em" y="7.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="5.1em" y="0.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="5.1em" y="1.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="5.1em" y="2.1em"/>
-  <rect class="water" height="0.9em" width="0.9em" x="5.1em" y="3.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="5.1em" y="4.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="5.1em" y="5.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="5.1em" y="6.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="5.1em" y="7.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="6.1em" y="0.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="6.1em" y="1.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="6.1em" y="2.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="6.1em" y="3.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="6.1em" y="4.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="6.1em" y="5.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="6.1em" y="6.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="6.1em" y="7.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="7.1em" y="0.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="7.1em" y="1.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="7.1em" y="2.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="7.1em" y="3.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="7.1em" y="4.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="7.1em" y="5.1em"/>
-  <rect class="normal" height="0.9em" width="0.9em" x="7.1em" y="6.1em"/>
-  <rect class="recharge" height="0.9em" width="0.9em" x="7.1em" y="7.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_00" width="0.9em" x="0.1em" y="0.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_01" width="0.9em" x="0.1em" y="1.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_02" width="0.9em" x="0.1em" y="2.1em"/>
+  <rect class="cell water" height="0.9em" id="cell_03" width="0.9em" x="0.1em" y="3.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_04" width="0.9em" x="0.1em" y="4.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_05" width="0.9em" x="0.1em" y="5.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_06" width="0.9em" x="0.1em" y="6.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_07" width="0.9em" x="0.1em" y="7.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_10" width="0.9em" x="1.1em" y="0.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_11" width="0.9em" x="1.1em" y="1.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_12" width="0.9em" x="1.1em" y="2.1em"/>
+  <rect class="cell water" height="0.9em" id="cell_13" width="0.9em" x="1.1em" y="3.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_14" width="0.9em" x="1.1em" y="4.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_15" width="0.9em" x="1.1em" y="5.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_16" width="0.9em" x="1.1em" y="6.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_17" width="0.9em" x="1.1em" y="7.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_20" width="0.9em" x="2.1em" y="0.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_21" width="0.9em" x="2.1em" y="1.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_22" width="0.9em" x="2.1em" y="2.1em"/>
+  <rect class="cell water" height="0.9em" id="cell_23" width="0.9em" x="2.1em" y="3.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_24" width="0.9em" x="2.1em" y="4.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_25" width="0.9em" x="2.1em" y="5.1em"/>
+  <rect class="cell lava" height="0.9em" id="cell_26" width="0.9em" x="2.1em" y="6.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_27" width="0.9em" x="2.1em" y="7.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_30" width="0.9em" x="3.1em" y="0.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_31" width="0.9em" x="3.1em" y="1.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_32" width="0.9em" x="3.1em" y="2.1em"/>
+  <rect class="cell water" height="0.9em" id="cell_33" width="0.9em" x="3.1em" y="3.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_34" width="0.9em" x="3.1em" y="4.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_35" width="0.9em" x="3.1em" y="5.1em"/>
+  <rect class="cell dry" height="0.9em" id="cell_36" width="0.9em" x="3.1em" y="6.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_37" width="0.9em" x="3.1em" y="7.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_40" width="0.9em" x="4.1em" y="0.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_41" width="0.9em" x="4.1em" y="1.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_42" width="0.9em" x="4.1em" y="2.1em"/>
+  <rect class="cell water" height="0.9em" id="cell_43" width="0.9em" x="4.1em" y="3.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_44" width="0.9em" x="4.1em" y="4.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_45" width="0.9em" x="4.1em" y="5.1em"/>
+  <rect class="cell lava" height="0.9em" id="cell_46" width="0.9em" x="4.1em" y="6.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_47" width="0.9em" x="4.1em" y="7.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_50" width="0.9em" x="5.1em" y="0.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_51" width="0.9em" x="5.1em" y="1.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_52" width="0.9em" x="5.1em" y="2.1em"/>
+  <rect class="cell water" height="0.9em" id="cell_53" width="0.9em" x="5.1em" y="3.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_54" width="0.9em" x="5.1em" y="4.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_55" width="0.9em" x="5.1em" y="5.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_56" width="0.9em" x="5.1em" y="6.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_57" width="0.9em" x="5.1em" y="7.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_60" width="0.9em" x="6.1em" y="0.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_61" width="0.9em" x="6.1em" y="1.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_62" width="0.9em" x="6.1em" y="2.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_63" width="0.9em" x="6.1em" y="3.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_64" width="0.9em" x="6.1em" y="4.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_65" width="0.9em" x="6.1em" y="5.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_66" width="0.9em" x="6.1em" y="6.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_67" width="0.9em" x="6.1em" y="7.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_70" width="0.9em" x="7.1em" y="0.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_71" width="0.9em" x="7.1em" y="1.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_72" width="0.9em" x="7.1em" y="2.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_73" width="0.9em" x="7.1em" y="3.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_74" width="0.9em" x="7.1em" y="4.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_75" width="0.9em" x="7.1em" y="5.1em"/>
+  <rect class="cell normal" height="0.9em" id="cell_76" width="0.9em" x="7.1em" y="6.1em"/>
+  <rect class="cell recharge" height="0.9em" id="cell_77" width="0.9em" x="7.1em" y="7.1em"/>
   <circle class="agent" cx="2.55em" cy="4.55em" id="agent1" r="0.3em"/>
 </svg>

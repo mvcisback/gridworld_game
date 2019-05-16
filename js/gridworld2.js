@@ -11,6 +11,7 @@ var curr_vue;
 var gridworld_snap;
 var agent_snap;
 
+
 // ---------------------------------------------------------------------------
 //                           State Transitions
 // ---------------------------------------------------------------------------
@@ -118,20 +119,26 @@ function is_recharge(state){
 document.addEventListener('keydown', (event) => {
     const keyName = event.key;
     move(keyName);
+    state.controllable = false;
     redraw();
     if (is_recharge(state) || state.battery < 0){
-        if (state.testing){
-            if (state.trial_num == state.max_trials){
-                send("TOGGLE");
-            }
-            state.trial_num = Math.min(state.max_trials, state.trial_num + 1);
-        }
-        state.battery = state.max_battery;
         state.x = 0;
         state.y = 5;
-        window.setTimeout(redraw, 800);
+        redraw();
+        state.controllable = false;
+        animateCSS(".agent, .cell", "fadeIn", function(){
+            if (state.testing){
+                if (state.trial_num == state.max_trials){
+                    send("TOGGLE");
+                }
+                state.trial_num = Math.min(state.max_trials, state.trial_num + 1);
+            }
+            state.battery = state.max_battery;
+            redraw(function(){ state.controllable = true; })
+        })
+    } else {
+        redraw(function(){ state.controllable = true; });
     }
-
 }, false);
 
 // ---------------------------------------------------------------------------
@@ -171,7 +178,6 @@ function gridworld_binder(controllable){
         state.controllable = controllable;
         curr_vue = new Vue({
             data: state,
-            el: "#app",
             computed: {
                 cant_advance: function(){
                     return this.ui_disabled || (!this.asked_query);
@@ -188,14 +194,15 @@ function gridworld_binder(controllable){
         }
         gridworld_snap = new Snap('#gridworld');
 
-        Snap.load("imgs/gridworld.svg", function (response) {
+        Snap.load("imgs/world1.svg", function (response) {
             gridworld_snap.append(response);
             if (agent_snap != null) {
                 agent_snap.remove();
             }
+            curr_vue.$mount("#app");
             agent_snap = Snap('#agent1');
             redraw();
-            
+
         });
     }
 };
@@ -230,7 +237,7 @@ function replay(world, start, actions){
 }
 
 
-function redraw(){
+function redraw(callback){
     agent_snap.animate(
         {cx: x0 + dx*state.x + state.bx, cy: x0 + dx*state.y + state.by},
         100, 
@@ -245,11 +252,14 @@ function redraw(){
     );
     state.bx = 0;
     state.by = 0;
+    if (callback != null){
+        callback();
+    }
 };
 
 
 function move(keyName){
-    if (!gridworld_actions.has(keyName)) {
+    if (!gridworld_actions.has(keyName) || !state.controllable) {
         return;
     }
     state.battery -= 1;
@@ -287,6 +297,26 @@ function move(keyName){
         state.x = 0;
     }
 }
+
+function animateCSS(element, animationName, callback) {
+    document.querySelectorAll(element).forEach(function(node){
+        node.classList.add('animated', animationName);
+
+        function handleAnimationEnd() {
+            node.classList.remove('animated', animationName);
+            node.removeEventListener('animationend', handleAnimationEnd);
+
+            if (typeof callback === 'function') callback();
+        }
+
+        node.addEventListener('animationend', handleAnimationEnd);
+    });
+}
+
+
+//--------------------------------------------------------------
+//                      Main
+//--------------------------------------------------------------
 
 
 stage_service.start();
